@@ -1,0 +1,14 @@
+.senha-alterada{
+    margin: 0;
+    font-size: 16px;
+    font-family: Poppins, Arial;
+    display: block;
+    text-align: center;
+    margin-bottom: 13px;
+    color: var(--green-senha);
+}
+
+.voltar-login{
+    font-size: 10px;
+    font-family: Poppins, Arial;
+}

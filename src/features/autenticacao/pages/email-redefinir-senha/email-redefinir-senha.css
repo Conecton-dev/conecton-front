@@ -1,0 +1,24 @@
+.container-principal-email {
+    font-family: Poppins, Arial;
+    color: var(--secondary);
+    margin-bottom:px;
+}
+.container-mensagem-redefinicao h1{
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+}
+.container-mensagem-redefinicao p{
+    font-size: 8px;
+    margin: 0;
+}
+.email{
+    font-weight: 600;
+}
+.container-mensagem-redefinicao {
+    margin-bottom: 12px;
+    gap: 12px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

@@ -1,0 +1,18 @@
+.SenhaEsquecida{
+    color: var(--primary);
+}
+
+.inputs-login{
+    width: 100%;
+}
+.input-cima{
+    margin-bottom: 16px;
+}
+
+.aviso-login{
+    margin-top: 6px;
+}
+.icon-loading {
+    width: 20px;
+    height: 20px;
+}

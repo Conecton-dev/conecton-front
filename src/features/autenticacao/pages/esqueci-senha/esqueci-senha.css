@@ -1,0 +1,29 @@
+.esqueci-senha-container{
+    color: var(--secondary);
+    gap: 12px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+.esqueci-senha-container h1{
+    font-size: 12px;
+}
+.tittle-esqueci-senha{
+    font-weight: 600;
+    margin: 0;
+}
+.esqueci-senha-container p{
+    margin: 0;
+    font-size: 8px;
+}
+
+.container-principal{
+    font-family: Poppins, Arial;
+}
+.botao-login{
+    margin-bottom: 20px;
+}
+.aviso-login{
+    margin-bottom: 16px;
+}
