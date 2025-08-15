@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 import { useUserStore } from '@/core/store/user';
-
+console.log('teste');
 const userStore = useUserStore()
 const nomeColaborardor = userStore.userProfile
 
