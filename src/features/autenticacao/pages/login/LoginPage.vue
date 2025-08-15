@@ -24,15 +24,20 @@
       class="aviso-login"
       descricaoAviso="Login ou senha inválidos"
     />
-    <ButtonLogin :isDisable="isDisablad"
+    <ButtonLogin
+      :isDisable="isDisablad"
       class="botao-login"
       :NomeBotao="NomeBotao"
       @click="handleLogin"
     >
-      <ion-icon :icon="ellipsisHorizontal" class="icon-loading"  v-if="isDisablad"></ion-icon>
+      <ion-icon
+        :icon="ellipsisHorizontal"
+        class="icon-loading"
+        v-if="isDisablad"
+      ></ion-icon>
     </ButtonLogin>
 
-    <EsqueciSenha />
+    <EsqueciSenha @click="router.push('/auth/esqueci-senha')" />
   </form>
 </template>
 
@@ -45,8 +50,9 @@ import InputsLogin from "@/features/autenticacao/components/InputsLogin.vue";
 import { ref, computed } from "vue";
 import { useAuthStore } from "@/core/store/auth";
 import { onMounted } from "vue";
-import { credential } from "@core/models/authInterface";
+import { credential } from "@/core/models/authInterface";
 import { ellipsisHorizontal } from "ionicons/icons";
+import router from "@/router";
 
 const authStore = useAuthStore();
 const formLogin = ref<credential>({ email: null, password: null });
@@ -56,9 +62,10 @@ const NomeBotao = ref("Acessar");
 
 const handleLogin = async () => {
   NomeBotao.value = "";
-  console.log("CLICOUOUU")
-  await authStore.login(formLogin.value);
-
+  const response = await authStore.login(formLogin.value);
+  if (!response?.sucesso) {
+    NomeBotao.value = "Acessar";
+  }
 };
 
 onMounted(() => {
