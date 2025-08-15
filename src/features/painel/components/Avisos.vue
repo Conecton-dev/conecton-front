@@ -14,7 +14,6 @@
 .principal-avisos{
     color: var(--primary);
     gap: 9px;
-    font-family: Poppins, Arial;
     display: flex;
     align-items: center;
     justify-content: center;

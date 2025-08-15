@@ -19,7 +19,6 @@
     p{
         font-size: 10px;
         color: white;
-        font-family: Poppins, Arial;
         margin: 0;
         padding: 27px 0px 27px 0px;
     }

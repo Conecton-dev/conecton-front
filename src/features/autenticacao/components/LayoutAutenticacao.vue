@@ -41,7 +41,6 @@ import { IonContent, IonPage } from "@ionic/vue";
   padding: 30px 20px;
 }
 .footer-autenticacao{
-  font-family: Poppins, Arial;
   font-weight: 300;
   color: white;
   position: fixed;

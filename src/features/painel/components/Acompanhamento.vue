@@ -1,13 +1,10 @@
 <template>
   <div class="acompanhamento-principal">
-    <div class="acompanhamento-tittle">
-      <div class="infos-acompanhamento">
-        <p>#</p>
-        <p>Início</p>
-        <p>Fim</p>
-        <p>HT</p>
-      </div>
-      <div class="line"></div>
+    <div class="infos-acompanhamento">
+      <p>#</p>
+      <p>Início</p>
+      <p>Fim</p>
+      <p>HT</p>
     </div>
     <div class="total-de-horas">
       <p>Total de horas</p>
@@ -18,29 +15,33 @@
 
 <style scoped>
 .infos-acompanhamento {
-  font-size: 16px;
   display: flex;
-  gap: 99px;
-  color: var(--secondary);
+  justify-content: space-between;
+  color: var(--primary);
+  border-bottom: 1px solid var(--primary);
 }
+
+.infos-acompanhamento p {
+  margin: 0px 0px 10px 0px;
+}
+
 .acompanhamento-principal {
-  font-family: Poppins, Arial;
-  width: 100%;
   height: 100%;
+  justify-content: space-between;
+  font-size: 12px;
   display: flex;
   flex-direction: column;
-  position: relative; 
 }
+
 .total-de-horas {
   display: flex;
   gap: 36px;
-  color: var(--secondary);
-  position: absolute; 
-  bottom: 0; 
-  right: 0;
+  color: var(--primary);
+  font-size: 12px;
+  align-self: flex-end;
 }
-.line {
-  width: 100%;
-  border: 1px solid var(--primary);
+
+.total-de-horas p {
+  margin: 0;
 }
 </style>

@@ -1,15 +1,7 @@
 .container-principal {
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
     gap: 28px;
-    margin-left: 238px;
-    margin-right: 238px;
-    margin-top: 83px;
-    margin-bottom: 93px;
+    margin-top: 143px;
 }
-.container-secundario{
-    display: flex;
-    gap: 24px;
-}
+

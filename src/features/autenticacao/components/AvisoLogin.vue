@@ -19,7 +19,6 @@ defineProps({
   margin: 0;
   display: block;
   text-align: center;
-  font-family: "Poppins", Arial;
   color: var(--red-avisos);
 }
 </style>

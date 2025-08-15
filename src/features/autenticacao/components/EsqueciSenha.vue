@@ -6,7 +6,6 @@
 .esqueci-senha {
   color: var(--primary);
   font-size: 10px;
-  font-family: Poppins, Arial;
   text-align: center;
   margin: 0;
   text-decoration: underline;

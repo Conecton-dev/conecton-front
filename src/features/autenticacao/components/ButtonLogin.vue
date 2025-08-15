@@ -27,7 +27,6 @@ defineProps({
   color: white;
   border-radius: 30px;
   margin-bottom: 26px;
-  font-family: "Poppins", Arial;
   font-size: 12px;
 }
 

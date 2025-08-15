@@ -74,7 +74,6 @@ defineEmits(["update:NomeUser"]);
   width: 100%;
   font-size: 10px;
   height: 20px;
-  font-family: Poppins;
   background-color: transparent;
 }
 .input-login::placeholder {
@@ -85,7 +84,6 @@ defineEmits(["update:NomeUser"]);
 }n
 .Label-login {
   font-size: 12px;
-  font-family: "Poppins";
   font-weight: 600;
   color: var(--secondary);
 }
