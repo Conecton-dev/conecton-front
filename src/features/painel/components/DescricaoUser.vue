@@ -1,7 +1,7 @@
 <template>
     <div class="descricao-user">
         <div class="dados-descricao">
-            <h1 class="nome">{{ nomeColaborardor.name }}</h1>
+            <h1 class="nome">{{ nomeColaborardor?.name }}</h1>
             <div class="line"></div>
             <h1><span class="funcao">Função:</span> Desenvolvedor </h1>
             <div class="line"></div>
@@ -12,6 +12,7 @@
 
 <script setup lang="ts">
 import { useUserStore } from '@/core/store/user';
+
 const userStore = useUserStore()
 const nomeColaborardor = userStore.userProfile
 
@@ -19,7 +20,6 @@ const nomeColaborardor = userStore.userProfile
 <style scoped>
 .descricao-user{
     z-index: 3;
-    font-family: Poppins, Arial;
     background-color: var(--light-purple);
     width: 100%;
     height: 40px;

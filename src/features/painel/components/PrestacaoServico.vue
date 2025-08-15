@@ -67,7 +67,7 @@ button {
   align-items: center;
   justify-content: center;
   gap: 22px;
-  color: var(--primary);
+  color: var(--tertiary-gray);
   font-size: 26px;
 }
 .container-servico {
@@ -78,7 +78,6 @@ button {
   justify-content: center;
   flex-direction: column;
   font-weight: 600;
-  font-family: Poppins, Arial;
 }
 .icon {
   width: 52px;
