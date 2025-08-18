@@ -26,11 +26,10 @@ export const useAuthStore = defineStore("authStore", {
         localStorage.setItem("auth_token", access_token);
         this.aviso = false
         router.push("/painel/inicio");
+        return response
       } catch (error: any) {
         this.isDisabled = false
         this.aviso = true;
-        console.error("Erro no login:", error.response?.data?.message || error);
-        throw new Error("Falha no login");
       }
     },
   },

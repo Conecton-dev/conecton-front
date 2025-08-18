@@ -9,7 +9,7 @@
 h1{
     margin: 0;
     margin-bottom: 16px;
-    color: var(--secondary);
+    color: var(--primary);
     font-weight: 600;
     font-size: 12px;
 }

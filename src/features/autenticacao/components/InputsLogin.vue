@@ -34,13 +34,13 @@ defineProps({
     required: false,
     default: "",
   },
-  TipoInput:{
+  TipoInput: {
     type: String,
     required: true,
   },
-  AutoComplete:{
+  AutoComplete: {
     type: String,
-    required: true
+    required: true,
   },
   isDisablade: {
     type: Boolean,
@@ -53,7 +53,7 @@ defineEmits(["update:NomeUser"]);
 
 <style scoped>
 .input {
-  height: 29px;
+  height: 34px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,14 +66,14 @@ defineEmits(["update:NomeUser"]);
   width: 13px;
   height: 14px;
   margin-right: 10px;
-  color: var(--secondary);
+  color: var(--primary);
 }
 .input-login {
   outline: none;
   border: none;
   width: 100%;
   font-size: 10px;
-  height: 20px;
+  height: 34px;
   background-color: transparent;
 }
 .input-login::placeholder {
@@ -81,11 +81,11 @@ defineEmits(["update:NomeUser"]);
   font-size: 10px;
   font-weight: 300;
   opacity: 1;
-}n
+}
 .Label-login {
   font-size: 12px;
   font-weight: 600;
-  color: var(--secondary);
+  color: var(--primary);
 }
 .container-input {
   display: flex;

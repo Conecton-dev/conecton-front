@@ -17,7 +17,7 @@ defineProps({
   outline: none;
   border: none;
   width: 100%;
-  height: 29px;
+  height: 34px;
   color: var(--second-gray);
   border-radius: 15px;
   padding-left: 20px;
