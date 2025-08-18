@@ -67,7 +67,7 @@ button {
   align-items: center;
   justify-content: center;
   gap: 22px;
-  color: var(--tertiary-gray);
+  color: var(--second-gray);
   font-size: 26px;
 }
 .container-servico {

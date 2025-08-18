@@ -21,7 +21,7 @@ defineProps({
 <style scoped>
 .container {
   width: 437px;
-  border: 2px solid var(--tertiary-gray);
+  border: 2px solid var(--second-gray);
   height: 211px;
   border-radius: 10px;
 }
@@ -32,7 +32,7 @@ defineProps({
   justify-content: center;
   color: var(--primary);
   font-weight: 600;
-  border-bottom: 3px solid var(--tertiary-gray);
+  border-bottom: 3px solid var(--second-gray);
   height: 40px;
 }
 
