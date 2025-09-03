@@ -6,27 +6,35 @@
       <div>Status</div>
       <div>Ações</div>
     </div>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
+    <CardNotification
+      v-for="not in notifications"
+      :key="not.id"
+      @notification="openNotification"
+    ></CardNotification>
   </div>
 </template>
 
 <script setup>
-import CardNotification from './CardNotification.vue';
+import CardNotification from "./CardNotification.vue";
+
+const openNotification = () => {
+  console.log("teste");
+};
+
+const notifications = [
+  {
+    id: 1,
+    date: "14/08/2025",
+    title: "Aviso",
+    status: "Não lido",
+  },
+  {
+    id: 2,
+    date: "15/08/2025",
+    title: "Atualização",
+    status: "Lido",
+  },
+];
 </script>
 
 <style scoped>
