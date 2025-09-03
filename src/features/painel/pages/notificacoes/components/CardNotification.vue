@@ -15,7 +15,7 @@ import { mail } from "ionicons/icons";
 import { defineEmits } from "vue";
 
 const emit = defineEmits(["notification"]);
-console.log('teste2')
+console.log('teste3')
 </script>
 
 <style scoped>
