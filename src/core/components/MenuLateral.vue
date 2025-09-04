@@ -1,5 +1,5 @@
 <template>
-    <div @click="fecharMenu" v-if="state" class="menu-lateral">
+    <div v-if="state" class="menu-lateral">
       <OpcoesMenuLateral
         :class="{ 'opcao-escolhida': selectedOption === 'inicio' }"
         @click="setSelectedOption('inicio')"
@@ -29,11 +29,11 @@
         :isSelected="selectedOption === 'notificacoes'"
       />
       <OpcoesMenuLateral
-        :class="{ 'opcao-escolhida': selectedOption === 'perfil' }"
-        @click="setSelectedOption('perfil')"
+        :class="{ 'opcao-escolhida': selectedOption === 'meu-perfil' }"
+        @click="setSelectedOption('meu-perfil')"
         :Icon="personCircle"
-        NomeOpcao="Meu Perfil"
-        :isSelected="selectedOption === 'perfil'"
+        NomeOpcao="Perfil"
+        :isSelected="selectedOption === 'meu-perfil'"
       />
     </div>
 </template>
@@ -46,7 +46,6 @@ import { useRouter } from "vue-router";
 
 const selectedOption = ref("");
 const router = useRouter();
-
 const setSelectedOption = (option) => {
   selectedOption.value = option;
   router.push({ name: option });
