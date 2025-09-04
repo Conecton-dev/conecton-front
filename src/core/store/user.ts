@@ -10,7 +10,6 @@ export const useUserStore = defineStore("userStore", {
     actions: {
         setUseProfile(user: Profile) {
             this.userProfile = user
-            console.log(user)
         },
         async getUserProfile() {
             const response = await api.get("/user");

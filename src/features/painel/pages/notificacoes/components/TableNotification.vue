@@ -6,27 +6,43 @@
       <div>Status</div>
       <div>Ações</div>
     </div>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
-    <CardNotification></CardNotification>
+    <CardNotification
+      v-for="not in notifications"
+      :key="not.id"
+      @notification="openNotification"
+      :iconMail="not.status === 'Lido' ? mailOpen : mail"
+    ></CardNotification>
   </div>
 </template>
 
 <script setup>
-import CardNotification from './CardNotification.vue';
+import CardNotification from "./CardNotification.vue";
+import ModalComponent from "@/core/components/ModalComponent.vue";
+import { modalController } from "@ionic/vue";
+import { mail, mailOpen } from "ionicons/icons";
+
+const openNotification = async () => {
+  const modal = await modalController.create({
+    component: ModalComponent,
+    cssClass: "modal-notification",
+  });
+  await modal.present();
+};
+
+const notifications = [
+  {
+    id: 1,
+    date: "14/08/2025",
+    title: "Aviso",
+    status: "Não lido",
+  },
+  {
+    id: 2,
+    date: "15/08/2025",
+    title: "Atualização",
+    status: "Lido",
+  },
+];
 </script>
 
 <style scoped>

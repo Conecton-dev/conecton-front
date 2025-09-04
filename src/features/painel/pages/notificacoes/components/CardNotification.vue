@@ -3,19 +3,29 @@
     <div>14/08/2025</div>
     <div>Aviso</div>
     <div>Não lido</div>
-    <div>
-      <ion-icon class="icon" :icon="mail" />
+    <div @click="emit('notification')">
+      <ion-icon class="icon" :icon="iconMail" />
     </div>
   </div>
 </template>
 
 <script setup>
 import { IonIcon } from "@ionic/vue";
-import { mail } from "ionicons/icons";
+
+import { defineEmits } from "vue";
+
+defineProps({
+  iconMail: {
+    type: String,
+    required: true,
+  },
+});
+
+const emit = defineEmits(["notification"]);
+
 </script>
 
 <style scoped>
-
 .row > div {
   font-size: 14px;
   padding: 10px;
