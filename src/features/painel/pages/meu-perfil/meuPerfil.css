@@ -1,0 +1,19 @@
+.container-perfil {
+  border: 1px solid var(--second-gray);
+  border-radius: 10px;
+  padding: 21px 40px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.main-perfil {
+  padding: 16px 38px;
+}

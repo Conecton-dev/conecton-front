@@ -16,6 +16,12 @@ const painelRoutes: Array<RouteRecordRaw> = [
         component: () =>
           import("../painel/pages/notificacoes/Notificacoes.vue"),
       },
+      {
+        path: "meu-perfil",
+        name: "meu-perfil",
+        component: () =>
+          import("../painel/pages/meu-perfil/MeuPerfil.vue"),
+      },
     ],
   },
 ];
