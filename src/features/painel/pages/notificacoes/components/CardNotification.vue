@@ -4,18 +4,25 @@
     <div>Aviso</div>
     <div>Não lido</div>
     <div @click="emit('notification')">
-      <ion-icon class="icon" :icon="mail" />
+      <ion-icon class="icon" :icon="iconMail" />
     </div>
   </div>
 </template>
 
 <script setup>
 import { IonIcon } from "@ionic/vue";
-import { mail } from "ionicons/icons";
+
 import { defineEmits } from "vue";
 
+defineProps({
+  iconMail: {
+    type: String,
+    required: true,
+  },
+});
+
 const emit = defineEmits(["notification"]);
-console.log('teste3')
+
 </script>
 
 <style scoped>

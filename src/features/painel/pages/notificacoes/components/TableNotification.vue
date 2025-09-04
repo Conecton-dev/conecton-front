@@ -10,15 +10,23 @@
       v-for="not in notifications"
       :key="not.id"
       @notification="openNotification"
+      :iconMail="not.status === 'Lido' ? mailOpen : mail"
     ></CardNotification>
   </div>
 </template>
 
 <script setup>
 import CardNotification from "./CardNotification.vue";
+import ModalComponent from "@/core/components/ModalComponent.vue";
+import { modalController } from "@ionic/vue";
+import { mail, mailOpen } from "ionicons/icons";
 
-const openNotification = () => {
-  console.log("teste");
+const openNotification = async () => {
+  const modal = await modalController.create({
+    component: ModalComponent,
+    cssClass: "modal-notification",
+  });
+  await modal.present();
 };
 
 const notifications = [
