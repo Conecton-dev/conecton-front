@@ -2,29 +2,37 @@
   <div class="table">
     <div class="row header">
       <div>Data</div>
-      <div>Título</div>
+      <div>Tempo em Atividades</div>
       <div>Status</div>
       <div>Ações</div>
     </div>
     <CardTable
       v-for="not in notifications"
       :key="not.id"
-      @notification="openNotification"
-      :iconMail="not.status === 'Lido' ? mailOpen : mail"
+      @viewAcompanhamento="viewAcompanhamento"
+      @listaDeAjustes="listaDeAjustes"
     ></CardTable>
   </div>
 </template>
 
 <script setup>
-import CardTable from "../components/CardTable.vue";
-import ModalComponent from "@/core/components/ModalComponent.vue";
+import ModalViewDetailRegistro from "./ModalViewDetailRegistro.vue";
+import ModalListaAjustes from "./ModalListaAjustes.vue";
 import { modalController } from "@ionic/vue";
-import { mail, mailOpen } from "ionicons/icons";
+import CardTable from "./CardTable.vue";
 
-const openNotification = async () => {
+const viewAcompanhamento = async () => {
   const modal = await modalController.create({
-    component: ModalComponent,
-    cssClass: "modal-notification",
+    component: ModalListaAjustes,
+    cssClass: "modal-view-detail-registro",
+  });
+  await modal.present();
+};
+
+const listaDeAjustes = async () => {
+  const modal = await modalController.create({
+    component: ModalViewDetailRegistro,
+    cssClass: "modal-list-registro",
   });
   await modal.present();
 };
