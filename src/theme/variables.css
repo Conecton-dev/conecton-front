@@ -28,3 +28,20 @@ http://ionicframework.com/docs/theming/ */
   --height: 400px;
   --border-radius: 10px;
 }
+
+.modal-view-detail-registro {
+  --width: 680px;
+  --height: 204px;
+  --border-radius: 10px;
+}
+
+.modal-add-ajuste-registro {
+  --width: 615px;
+  --height: 351px;
+  --border-radius: 10px;
+}
+.modal-list-registro {
+  --width: 615px;
+  --height: 351px;
+  --border-radius: 10px;
+}

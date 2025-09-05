@@ -11,6 +11,12 @@ const painelRoutes: Array<RouteRecordRaw> = [
         component: () => import("../painel/pages/inicio/InicioPage.vue"),
       },
       {
+        path: "acompanhamento",
+        name: "acompanhamento",
+        component: () =>
+          import("../painel/pages/acompanhamento/AcompanhamentoPage.vue"),
+      },
+      {
         path: "notificacoes",
         name: "notificacoes",
         component: () =>

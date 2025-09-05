@@ -15,13 +15,6 @@
         :isSelected="selectedOption === 'acompanhamento'"
       />
       <OpcoesMenuLateral
-        :class="{ 'opcao-escolhida': selectedOption === 'ajuste' }"
-        @click="setSelectedOption('ajuste')"
-        :Icon="calendar"
-        NomeOpcao="Ajuste"
-        :isSelected="selectedOption === 'ajuste'"
-      />
-      <OpcoesMenuLateral
         :class="{ 'opcao-escolhida': selectedOption === 'notificacoes' }"
         @click="setSelectedOption('notificacoes')"
         :Icon="barbell"
@@ -40,7 +33,7 @@
 
 <script setup>
 import { defineProps, ref } from "vue";
-import { home, personCircle, calendar, time, barbell } from "ionicons/icons";
+import { home, personCircle, time, barbell } from "ionicons/icons";
 import OpcoesMenuLateral from "./OpcoesMenuLateral.vue";
 import { useRouter } from "vue-router";
 
